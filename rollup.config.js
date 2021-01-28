@@ -1,4 +1,3 @@
-import sass from 'rollup-plugin-sass';
 import typescript from 'rollup-plugin-typescript2';
 
 import pkg from './package.json'
@@ -11,12 +10,10 @@ export default {
         format: 'cjs',
         exports: 'named',
         sourcemap: true,
-        strict: false
-      }
+        strict: false      }
     ],
     plugins: [
-      sass({ insert: true }),
-      typescript({ objectHashIgnoreUnknownHack: true })
+      typescript()
     ],
     external: ['react', 'react-dom', 'reactstrap',]
   }

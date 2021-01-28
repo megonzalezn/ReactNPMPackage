@@ -1,8 +1,5 @@
 import { Button, Card, Label } from 'reactstrap';
 import * as React from 'react'
-import './styles.scss'
-
-
 
 export type ICounterProps = {
   mensaje?: string
@@ -21,7 +18,6 @@ const Test: React.FC<ICounterProps> = (props) => {
       <Button onClick={() => logSomething('Este mensaje es desde el Package, a través de un método en ' + mensaje) } >Log</Button>
     </Card>
   </React.Fragment>)
-
 }
 
 export default Test;
